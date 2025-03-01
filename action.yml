@@ -13,7 +13,7 @@ inputs:
     description: GitHub token
     default: ${{ github.token }}
     required: true
-  issueId:
+  issue_id:
     description: Github issue Id
     required: true
 
