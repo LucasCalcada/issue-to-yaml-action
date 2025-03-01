@@ -9,6 +9,10 @@ branding:
 
 # Define your inputs here.
 inputs:
+  github_token:
+    description: GitHub token
+    default: ${{ github.token }}
+    required: true
   issueId:
     description: Github issue Id
     required: true
