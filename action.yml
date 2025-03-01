@@ -1,23 +1,22 @@
-name: The name of your action here
-description: Provide a description here
-author: Your name or organization here
+name: 'Issue to yaml'
+description: 'Parse issue data into a yaml file'
+author: LucasCalcada
 
 # Add your action's branding here. This will appear on the GitHub Marketplace.
 branding:
-  icon: heart
-  color: red
+  icon: file
+  color: green
 
 # Define your inputs here.
 inputs:
-  milliseconds:
-    description: Your input description here
+  issueId:
+    description: Github issue Id
     required: true
-    default: '1000'
 
 # Define your outputs here.
 outputs:
-  time:
-    description: Your output description here
+  yamlFile:
+    description: Parsed yaml file content
 
 runs:
   using: node20
