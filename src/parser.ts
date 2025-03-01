@@ -27,18 +27,18 @@ function isNumber(value: string) {
   return /^-?\d+$/.test(value)
 }
 
-function parseProperty(prop: any): Property {
-  prop = prop.split('\n')
-  prop = removeEmptyStrings(prop)
-  const key = toPropertyName(prop[0])
+function parseProperty(prop: string): Property {
+  let props = prop.split('\n')
+  props = removeEmptyStrings(props)
+  const key = toPropertyName(props[0])
 
   let propVal: string | number | boolean
-  if (isCheckbox(prop[1])) {
-    propVal = parseCheckbox(prop[1])
-  } else if (isNumber(prop[1])) {
-    propVal = Number.parseInt(prop[1])
+  if (isCheckbox(props[1])) {
+    propVal = parseCheckbox(props[1])
+  } else if (isNumber(props[1])) {
+    propVal = Number.parseInt(props[1])
   } else {
-    propVal = prop[1]
+    propVal = props[1]
   }
 
   return {
