@@ -10,7 +10,7 @@ import { stringify } from 'yaml'
  */
 export async function run(): Promise<void> {
   try {
-    const issue: number = Number.parseInt(core.getInput('issueId'))
+    const issue: number = Number.parseInt(core.getInput('issue_id'))
 
     core.debug(`Requesting issue ${issue} ...`)
 

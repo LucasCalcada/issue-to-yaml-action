@@ -1,7 +1,7 @@
 import * as core from '@actions/core'
 import * as gh from '@actions/github'
 
-const token = core.getInput('token', { required: true })
+const token = core.getInput('github_token', { required: true })
 const octokit = gh.getOctokit(token)
 
 export async function getIssue(id: number) {

@@ -31230,7 +31230,7 @@ function requireGithub () {
 
 var githubExports = requireGithub();
 
-const token = coreExports.getInput('token', { required: true });
+const token = coreExports.getInput('github_token', { required: true });
 const octokit = githubExports.getOctokit(token);
 async function getIssue(id) {
     const response = await octokit.rest.issues.get({
@@ -34766,7 +34766,7 @@ function stringify(value, replacer, options) {
  */
 async function run() {
     try {
-        const issue = Number.parseInt(coreExports.getInput('issueId'));
+        const issue = Number.parseInt(coreExports.getInput('issue_id'));
         coreExports.debug(`Requesting issue ${issue} ...`);
         const issueBody = await getIssue(issue);
         const parsedIssue = parseIssue(issueBody);
