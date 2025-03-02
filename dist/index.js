@@ -34769,7 +34769,9 @@ async function run() {
         const issue = Number.parseInt(coreExports.getInput('issue_id'));
         coreExports.debug(`Requesting issue ${issue} ...`);
         const issueBody = await getIssue(issue);
+        coreExports.debug(`Issue body: ${issueBody} ...`);
         const parsedIssue = parseIssue(issueBody);
+        coreExports.debug(`Parsed issue: ${parsedIssue} ...`);
         coreExports.setOutput('file', stringify(parsedIssue));
     }
     catch (error) {

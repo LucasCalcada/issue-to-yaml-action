@@ -15,7 +15,10 @@ export async function run(): Promise<void> {
     core.debug(`Requesting issue ${issue} ...`)
 
     const issueBody = await getIssue(issue)
+    core.debug(`Issue body: ${issueBody} ...`)
+
     const parsedIssue = parseIssue(issueBody as string)
+    core.debug(`Parsed issue: ${parsedIssue} ...`)
 
     core.setOutput('file', stringify(parsedIssue))
   } catch (error) {
