@@ -34772,7 +34772,7 @@ async function run() {
         coreExports.debug(`Issue body: ${issueBody} ...`);
         const parsedIssue = parseIssue(issueBody);
         coreExports.debug(`Parsed issue: ${parsedIssue} ...`);
-        coreExports.setOutput('file', stringify(parsedIssue));
+        coreExports.setOutput('yamlFile', stringify(parsedIssue));
     }
     catch (error) {
         // Fail the workflow run if an error occurs
