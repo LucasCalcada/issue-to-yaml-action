@@ -16,5 +16,5 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           issue_id: ${{ github.event.issue.number }}
-      - name: Get the output time
-        run: echo "The time was ${{ steps.action.outputs.yamlFile}}"
+      - name: Get the parsed file'
+        run: echo "${{ steps.action.outputs.yamlFile }}"
