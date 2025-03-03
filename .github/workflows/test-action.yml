@@ -3,6 +3,10 @@ on:
     types:
       - opened
 
+permissions:
+  contents: read
+  issues: read
+
 jobs:
   issue_parser:
     runs-on: ubuntu-latest
